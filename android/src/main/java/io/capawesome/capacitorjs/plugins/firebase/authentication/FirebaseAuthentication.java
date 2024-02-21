@@ -651,7 +651,7 @@ public class FirebaseAuthentication {
   public void updateEmail(
     FirebaseUser user,
     @NonNull String newEmail,
-    @NonNull Runnable callback
+    final PluginCall call
   ) {
     user
       .updateEmail(newEmail)
