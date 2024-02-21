@@ -658,11 +658,10 @@ public class FirebaseAuthentication {
       .addOnCompleteListener(
         task -> {
           if (task.isSuccessful()) {
-            Log.d(FirebaseAuthenticationPlugin.TAG, "updateEmail succeeded.");
             call.resolve();
           } else {
             Exception exception = task.getException();
-            Log.e(
+            Logger.error(
               FirebaseAuthenticationPlugin.TAG,
               "updateEmail failed.",
               exception
